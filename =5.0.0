@@ -1,0 +1,20 @@
+Collecting redis
+  Downloading redis-7.1.0-py3-none-any.whl.metadata (12 kB)
+Collecting pytest-asyncio
+  Using cached pytest_asyncio-1.3.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting pytest<10,>=8.2 (from pytest-asyncio)
+  Using cached pytest-9.0.1-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: typing-extensions>=4.12 in ./.venv-treasury/lib/python3.12/site-packages (from pytest-asyncio) (4.15.0)
+Collecting iniconfig>=1.0.1 (from pytest<10,>=8.2->pytest-asyncio)
+  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=22 in ./.venv-treasury/lib/python3.12/site-packages (from pytest<10,>=8.2->pytest-asyncio) (25.0)
+Collecting pluggy<2,>=1.5 (from pytest<10,>=8.2->pytest-asyncio)
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv-treasury/lib/python3.12/site-packages (from pytest<10,>=8.2->pytest-asyncio) (2.19.2)
+Downloading redis-7.1.0-py3-none-any.whl (354 kB)
+Using cached pytest_asyncio-1.3.0-py3-none-any.whl (15 kB)
+Using cached pytest-9.0.1-py3-none-any.whl (373 kB)
+Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Installing collected packages: redis, pluggy, iniconfig, pytest, pytest-asyncio
+Successfully installed iniconfig-2.3.0 pluggy-1.6.0 pytest-9.0.1 pytest-asyncio-1.3.0 redis-7.1.0

@@ -1,0 +1,35 @@
+stages:
+  - test
+  - build
+
+variables:
+  PYTHON_VERSION: "3.12"
+
+test:
+  stage: test
+  image: python:${PYTHON_VERSION}-slim
+  services:
+    - redis:7-alpine
+  variables:
+    REDIS_HOST: redis
+    REDIS_PORT: 6379
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  script:
+    - pytest tests/ -v --tb=short
+  only:
+    - merge_requests
+    - main
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t agent:${CI_COMMIT_SHORT_SHA} .
+    - echo "Build successful"
+  only:
+    - main
+    - merge_requests
